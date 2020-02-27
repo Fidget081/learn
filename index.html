@@ -10,30 +10,20 @@ development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.15.0/
 babel.min.js"></script>
 <style>
-    #container {
-    padding: 50px;
-    background-color: #EEE;
-    }
-    #container h1 {
-    font-size: 144px;
-    font-family: sans-serif;
-    color: #0080A8;
-    }
+
 </style>
 </head>
 <body>
     <div id="container"></div>
-<script type="text/babel">
-var destination = document.querySelector("#container");
-   ReactDOM.render (
-    <div>
-      <h1>React</h1>
-      <h1>React2</h1>
-      <h1>React3</h1>
-    </div>,
-    destination
-    // document.querySelector("#container")
-  );
-</script>
-</body>
+    <script type="text/babel">
+    class HelloWorld extends React.Component {
+      }
+      ReactDOM.render(
+      <div>
+      <p>Ммм!</p>
+      </div>,
+      document.querySelector("#container")
+      );
+    </script>
+    </body>
 </html>
