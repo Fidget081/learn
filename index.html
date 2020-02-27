@@ -16,15 +16,46 @@ babel.min.js"></script>
 <body>
     <div id="container"></div>
     <script type="text/babel">
-      class HelloWorld extends React.Component {
-        render() {
-          return <p>1!</p>
-          }
-        }
-        ReactDOM.render(
-          <HelloWorld/>,
-          document.querySelector("#container")
-          );
+    // class HelloWorld extends React.Component {
+    //   render() {
+    //     return <p>Vvv {this.props.greetTarget}!</p>
+    //     }
+    //   }
+    //   ReactDOM.render(
+    //     <div>
+    //     <HelloWorld greetTarget="хмм"/>
+    //     </div>,
+    //     document.querySelector("#container")
+    //     );
+
+    // class Buttonify extends React.Component {
+    //     render() {
+    //     return(
+    //     <button type={this.props.behavior}>{this.props.
+    //     children}</button>
+    //     );
+    //     }
+    //     }
+    //   ReactDOM.render(
+    //   <div>
+    //   <Buttonify behavior="submit">Button</Buttonify>
+    //   </div>,
+    //   document.querySelector("#container")
+    //   );
+
+    class CleverComponent extends React.Component {
+       render() {
+        return(
+          <div>{this.props.children}</div>
+        );
+    }
+  }
+      ReactDOM.render (      
+        <CleverComponent foo="bar">
+          <p>7</p>
+        </CleverComponent>,
+      document.querySelector("#container")
+      );
       
     </script>
     </body>
