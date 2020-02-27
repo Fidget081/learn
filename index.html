@@ -16,14 +16,16 @@ babel.min.js"></script>
 <body>
     <div id="container"></div>
     <script type="text/babel">
-    class HelloWorld extends React.Component {
-      }
-      ReactDOM.render(
-      <div>
-      <p>Ммм!</p>
-      </div>,
-      document.querySelector("#container")
-      );
+      class HelloWorld extends React.Component {
+        render() {
+          return <p>1!</p>
+          }
+        }
+        ReactDOM.render(
+          <HelloWorld/>,
+          document.querySelector("#container")
+          );
+      
     </script>
     </body>
 </html>
