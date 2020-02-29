@@ -17,9 +17,42 @@
 <div id="container"></div>
 <script type="text/babel">
 
+  class Square extends React.Component {
+    render() {
+      return (
+        <br/>
+      );
+    }
+  }
+
+  class Label extends React.Component {
+    render() {
+     return (
+        <br/>
+      );
+    }
+  }
+
+  class Card extends React.Component {
+    render(){
+      var cardStyle = {
+        height: 200,
+        width: 150,
+        padding: 0,
+        backgroundColor: "#FFF",
+        boxShadow: "0px 0px 5px #666"
+        };
+      return(        
+        <div style={cardStyle}>
+        </div>
+
+      );
+    }
+  }
+
   ReactDOM.render(
   <div>
-    
+    <Card />
   </div>,
   document.querySelector("#container")
   );
