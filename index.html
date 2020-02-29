@@ -22,7 +22,7 @@
     var letterStyle = {
     padding: 10,
     margin: 10,
-    backgroundColor: "#FFDE00",
+    backgroundColor: this.props.bgcolor,
     color: "#333",
     display: "inline-block",
     fontFamily: "monospace",
@@ -38,11 +38,11 @@
   }
   ReactDOM.render(
   <div>
-  <Letter>G</Letter>
+  <Letter bgcolor="#58B3FF">G</Letter>
   <Letter>U</Letter>
-  <Letter>J</Letter>
+  <Letter bgcolor="#FFD52E">J</Letter>
   <Letter>)</Letter>
-  <Letter>X</Letter>
+  <Letter bgcolor="#AE99FF">X</Letter>
   </div>,
   destination
   );
