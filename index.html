@@ -16,36 +16,13 @@
 <body>
 <div id="container"></div>
 <script type="text/babel">
-  var destination = document.querySelector("#container");
-  class Letter extends React.Component {
-    render() {
-    var letterStyle = {
-    padding: 10,
-    margin: 10,
-    backgroundColor: this.props.bgcolor,
-    color: "#333",
-    display: "inline-block",
-    fontFamily: "monospace",
-    fontSize: 32,
-    textAlign: "center"
-  };
-  return (
-  <div style={letterStyle}>
-  {this.props.children}
-  </div>
-  );
-  }
-  }
+
   ReactDOM.render(
   <div>
-  <Letter bgcolor="#58B3FF">G</Letter>
-  <Letter>U</Letter>
-  <Letter bgcolor="#FFD52E">J</Letter>
-  <Letter>)</Letter>
-  <Letter bgcolor="#AE99FF">X</Letter>
+    
   </div>,
-  destination
+  document.querySelector("#container")
   );
-  </script>
+</script>
 </body>
 </html>
