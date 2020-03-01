@@ -53,12 +53,19 @@
         backgroundColor: "#FFF",
         boxShadow: "0px 0px 5px #666"
         };
-        return React.createElement(
-          "div",
-          {style: cardStyle},
-          React.createElement(Square, {color: this.props.color}),
-          React.createElement(Label, {color: this.props.color})
-          );
+      // return(        
+      //   <div style={cardStyle}>
+      //       <Square color={this.props.color} />
+      //       <Label color={this.props.color} />
+      //   </div>
+      return React.createElement(
+        "div",
+        {style: cardStyle},
+        React.createElement(Square, {color: this.props.color}),
+        React.createElement(Label, {color: this.props.color})
+        );
+
+      );
     }
   }
 
