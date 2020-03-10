@@ -31,6 +31,12 @@ class LightningCounter extends React.Component {
       strikes: this.state.strikes + 100
     });
   }
+
+  // this.setState((prevState) => {
+  //   return { 
+  //    strikes: prevState.strikes + 100 
+  //   };
+  // });
  
   componentDidMount() {
     setInterval(this.timerTick, 1000);
