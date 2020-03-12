@@ -41,7 +41,8 @@
   var renderData = [];
 
   for (var i = 0; i < colors.length; i++) {
-  var color = colors[i];
+    var n = Math.floor(Math.random() * colors.length);
+    var color = colors[n];
   renderData.push(<Circle key={i + color} bgColor={color}/>);
 }
 
