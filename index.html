@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>React! React! React!</title>
-        <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
         <script src="https://unpkg.com/react/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
         <style>
           #container {
           padding: 50px;
@@ -36,14 +36,17 @@
     }
   }
 
-  function showCircle() {
-    var colors = ["#393E41", "#E94F37", "#1C89BF", "#A1D363"];
-    var ran = Math.floor(Math.random() * colors.length);
-    return <Circle bgColor={ colors[ran] } />;
-  }  
+  var colors = ["#393E41", "#E94F37", "#1C89BF", "#A1D363", "#85FFC7", "#297373", "#FF8552", "#A40E4C"];
+ 
+  var renderData = [];
+  
+  for (var i = 0; i < colors.length; i++) {
+    renderData.push(<Circle bgColor={colors[i]}/>);
+  }
+      
   ReactDOM.render(
     <div>
-      {showCircle() }
+      {renderData}
     </div>,
     document.querySelector("#container")
   );
