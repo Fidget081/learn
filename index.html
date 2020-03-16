@@ -40,13 +40,20 @@
           this.state = {
             count: 0
           };
-          
+
           this.increase = this.increase.bind(this);
         }
 
         increase(e) {
+          var currentCount = this.state.count;
+          if (e.shiftKey) {
+            currentCount += 10;
+            } else {
+            currentCount += 1;
+            }
+
           this.setState({
-          count: this.state.count + 1
+          count: currentCount
           });
         }
       
@@ -70,13 +77,6 @@
             lineHeight: "3px"
           };
       
-          // return (
-          //   <div style={backgroundStyle}>
-          //     <Counter display={this.state.count} />
-          //     <button style={buttonStyle}>+</button>
-          //   </div>
-          // );
-
           return (
             <div style={backgroundStyle}>
             <Counter display={this.state.count}/>
